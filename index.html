@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - VizFit</title>
+    <style>
+        :root {
+            --primary: #4F46E5;
+            --primary-dark: #4338CA;
+            --primary-light: #EEF2FF;
+            --text-main: #1F2937;
+            --text-muted: #4B5563;
+            --bg-page: #F9FAFB;
+            --bg-card: #FFFFFF;
+            --border-color: #E5E7EB;
+            --accent: #10B981;
+            --tag-bg: #E0E7FF;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #6366F1;
+                --primary-dark: #4F46E5;
+                --primary-light: #1E1B4B;
+                --text-main: #F3F4F6;
+                --text-muted: #9CA3AF;
+                --bg-page: #0F172A;
+                --bg-card: #1E293B;
+                --border-color: #334155;
+                --accent: #34D399;
+                --tag-bg: #312E81;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding: 24px 16px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+            padding: 40px 32px;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 24px 18px;
+            }
+        }
+
+        .header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+
+        .app-badge {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .meta-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 12px;
+            background: var(--bg-page);
+            padding: 16px;
+            border-radius: 10px;
+            margin-top: 16px;
+            font-size: 0.9rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .meta-item strong {
+            display: block;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .meta-item span {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .toc {
+            background: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 32px;
+        }
+
+        .toc h3 {
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+            color: var(--primary-dark);
+        }
+
+        .toc ol {
+            padding-left: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 8px;
+        }
+
+        .toc a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.92rem;
+            font-weight: 500;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 36px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin: 18px 0 8px 0;
+            color: var(--text-main);
+        }
+
+        p {
+            margin-bottom: 12px;
+            color: var(--text-muted);
+        }
+
+        ul, ol {
+            margin-bottom: 14px;
+            padding-left: 24px;
+            color: var(--text-muted);
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .callout-box {
+            background: var(--bg-page);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent);
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px 0;
+        }
+
+        .callout-box strong {
+            color: var(--text-main);
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 14px;
+            margin: 16px 0;
+        }
+
+        .feature-card {
+            background: var(--bg-page);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 16px;
+        }
+
+        .feature-card h4 {
+            color: var(--primary);
+            margin-bottom: 6px;
+            font-size: 1rem;
+        }
+
+        .ad-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 14px;
+            margin: 16px 0;
+        }
+
+        .ad-card {
+            background: var(--bg-page);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 16px;
+        }
+
+        .ad-card h4 {
+            font-size: 1rem;
+            color: var(--primary);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .ad-card p {
+            font-size: 0.88rem;
+            margin-bottom: 6px;
+        }
+
+        .ad-card a {
+            font-size: 0.82rem;
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        a {
+            color: var(--primary);
+            word-break: break-all;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="header">
+        <span class="app-badge">Official Legal Privacy Document</span>
+        <h1>Privacy Policy for VizFit</h1>
+        <p>This Privacy Policy explains how <strong>VizFit</strong> ("the Application", "the App", "we", "our", or "us"), created and maintained by developer <strong>Raza</strong>, collects, processes, and protects your information.</p>
+        
+        <div class="meta-info">
+            <div class="meta-item">
+                <strong>Application Name</strong>
+                <span>VizFit</span>
+            </div>
+            <div class="meta-item">
+                <strong>Package Name</strong>
+                <span>com.raza.vizfit</span>
+            </div>
+            <div class="meta-item">
+                <strong>Developer</strong>
+                <span>Raza</span>
+            </div>
+            <div class="meta-item">
+                <strong>Inquiries & Support Email</strong>
+                <span>moinu4068@gmail.com</span>
+            </div>
+            <div class="meta-item">
+                <strong>Last Updated & Effective Date</strong>
+                <span>October 24, 2026</span>
+            </div>
+            <div class="meta-item">
+                <strong>Platform Target</strong>
+                <span>Android OS (Google Play Store)</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="toc">
+        <h3>Table of Contents</h3>
+        <ol>
+            <li><a href="#introduction">1. Introduction & Mission</a></li>
+            <li><a href="#features-summary">2. Overview of App Features & Options</a></li>
+            <li><a href="#camera-ar">3. Camera Access, CameraX & AR Fitting Mirror</a></li>
+            <li><a href="#on-device">4. On-Device Processing & Zero Biometric Upload</a></li>
+            <li><a href="#fit-profiles">5. Brand Fit Profiles & Local Room Database</a></li>
+            <li><a href="#advertising">6. Advertising Disclosures (AdMob & Ad Partners)</a></li>
+            <li><a href="#data-security">7. Data Security, Encryption & Sandboxing</a></li>
+            <li><a href="#user-rights">8. User Rights, Data Control & Deletion (GDPR/CCPA)</a></li>
+            <li><a href="#children">9. Children's Privacy (COPPA Compliance)</a></li>
+            <li><a href="#affiliate">10. Third-Party E-Commerce & Retailer Outbound Links</a></li>
+            <li><a href="#changes">11. Updates to This Privacy Policy</a></li>
+            <li><a href="#contact">12. Contact Information & Data Requests</a></li>
+        </ol>
+    </nav>
+
+    <section id="introduction">
+        <h2>1. Introduction & Mission</h2>
+        <p><strong>VizFit</strong> (package: <code>com.raza.vizfit</code>) is an advanced Android mobile application engineered to help consumers accurately identify, visualize, and choose the correct garment sizes across various global and regional clothing brands. Our mission is to eliminate sizing guesswork, minimize e-commerce clothing return rates, and offer an interactive virtual fitting experience directly on the user's smartphone.</p>
+        <p>We believe biometric measurements and personal photos are deeply private. Therefore, VizFit operates under a <strong>strict privacy-by-design, local-first computing architecture</strong>: live camera frames and body measurements are never transferred to external servers.</p>
+    </section>
+
+    <section id="features-summary">
+        <h2>2. Overview of App Features & Options</h2>
+        <p>VizFit provides the following core features and options, which have been designed in compliance with Google Play Developer Program policies and global data privacy regulations:</p>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h4>📐 CameraX Body Measurement Scan</h4>
+                <p>Guided on-screen silhouette overlays that assist users in aligning their body to extract proportional metrics (chest, waist, hips, shoulders, height).</p>
+            </div>
+            <div class="feature-card">
+                <h4>🤖 Computer Vision Sizing AI</h4>
+                <p>An intelligent sizing engine that maps body proportions against brand-specific sizing charts (Zara, Nike, Levi's, H&amp;M, Uniqlo, Mango, Ralph Lauren, Khaadi, Gul Ahmed, etc.) to output recommended sizes (S, M, L, XL).</p>
+            </div>
+            <div class="feature-card">
+                <h4>🪞 AR Virtual Try-On Mirror</h4>
+                <p>Real-time Augmented Reality overlay using your phone's camera to render clothing items, fabric drape, and wireframes onto your physical space.</p>
+            </div>
+            <div class="feature-card">
+                <h4>👤 Personalized Brand Fit Profiles</h4>
+                <p>Custom profile management enabling you to store brand-specific fit preferences (Slim, Regular, Relaxed, Oversized) and fine-tune sizing for repeat shopping.</p>
+            </div>
+            <div class="feature-card">
+                <h4>⚖️ Multi-Brand Size Comparator</h4>
+                <p>Simultaneous cross-comparison of size gradings across multiple fashion brands and regional sizing charts (US, UK, EU, Pakistani).</p>
+            </div>
+            <div class="feature-card">
+                <h4>👗 Virtual Closet & Saved Looks</h4>
+                <p>Local cataloging of virtual try-on history, sizing comfort scores, and drape quality ratings stored safely on your device.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="camera-ar">
+        <h2>3. Camera Access, CameraX & AR Fitting Mirror</h2>
+        <p>VizFit requests runtime access to your device's Camera (<code>android.permission.CAMERA</code>). This permission is required only when accessing the following specific features:</p>
+        <ul>
+            <li><strong>Live Camera Measurement Scan:</strong> Displaying alignment guides (head, shoulder, waist, and hip indicators) to calibrate frame proportions for metric estimation.</li>
+            <li><strong>Augmented Reality (AR) Virtual Dressing Mirror:</strong> Projecting virtual garments, contours, and silhouette drape onto live preview frames in real time.</li>
+        </ul>
+        <div class="callout-box">
+            <strong>Runtime Permission Control:</strong>
+            VizFit never accesses your camera without your explicit consent. Camera permission is requested at runtime with a clear explanatory prompt. You have full freedom to decline or revoke camera permission at any time via <em>Settings &gt; Apps &gt; VizFit &gt; Permissions &gt; Camera</em>. If camera permission is withheld, you can still input measurements manually.
+        </div>
+    </section>
+
+    <section id="on-device">
+        <h2>4. On-Device Processing & Zero Biometric Upload</h2>
+        <p>We respect the confidentiality of your physical appearance and body imagery:</p>
+        <ul>
+            <li><strong>RAM-Only Video Frame Analysis:</strong> Live video frames streamed from CameraX are analyzed transiently in volatile device memory (RAM) to calculate bounding boxes and silhouette contours. Frames are discarded immediately after calculation.</li>
+            <li><strong>No Cloud Biometric Storage:</strong> VizFit <strong>does NOT</strong> stream, record, or upload your live camera frames, photos, facial landmarks, or raw body imagery to any remote cloud servers.</li>
+            <li><strong>Zero Face Recognition:</strong> The application does not perform biometric facial recognition or identity tracking.</li>
+        </ul>
+    </section>
+
+    <section id="fit-profiles">
+        <h2>5. Brand Fit Profiles & Local Room Database</h2>
+        <p>To deliver accurate size predictions that adapt to your personal taste, VizFit allows you to create and manage 'Fit Profiles' for various brands. This data is stored strictly in your device's sandboxed Room database:</p>
+        <ul>
+            <li>Physical metrics: Height (cm/in), Weight (kg/lbs), Chest, Waist, Hips, Shoulder width.</li>
+            <li>Fit preferences: Tight, Slim Fit, Regular Balanced, Relaxed, Oversized.</li>
+            <li>Brand customizations: Fine-tuned adjustment offsets for brands you shop from repeatedly.</li>
+        </ul>
+        <p>This profile data stays on your device. It is never sold, shared with data brokers, or synced to third-party databases.</p>
+    </section>
+
+    <section id="advertising">
+        <h2>6. Advertising Disclosures (Google AdMob & Ad Partners)</h2>
+        <p>To support the free availability, continuous maintenance, and ongoing development of VizFit, our application integrates third-party mobile advertising SDKs and website monetization partner networks. These partners may serve advertisements within the app or on related partner web landing views.</p>
+
+        <h3>Advertising Networks & Monetization Partners:</h3>
+        <div class="ad-grid">
+            <div class="ad-card">
+                <h4>🟢 Google AdMob</h4>
+                <p>Displays adaptive banner ads, transition interstitial ads, rewarded video ads, and native styled ad components.</p>
+                <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google Ads Privacy Policy &rarr;</a>
+            </div>
+            <div class="ad-card">
+                <h4>🔵 AppLovin / MAX Mediation</h4>
+                <p>Provides programmatic mediation, interstitial ads, and rewarded video ads to optimize ad delivery.</p>
+                <a href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">AppLovin Privacy Policy &rarr;</a>
+            </div>
+            <div class="ad-card">
+                <h4>🟣 Unity Ads</h4>
+                <p>Delivers high-performance interactive video ads and rewarded ad placements.</p>
+                <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unity Technologies Privacy &rarr;</a>
+            </div>
+            <div class="ad-card">
+                <h4>🟠 Meta Audience Network</h4>
+                <p>Serves relevant sponsored placements and native banner ads based on general audience signals.</p>
+                <a href="https://www.facebook.com/about/privacy/" target="_blank" rel="noopener">Meta Privacy Center &rarr;</a>
+            </div>
+            <div class="ad-card">
+                <h4>🌐 Partner Web Ad Networks</h4>
+                <p>Third-party website display networks (such as Start.io, Adsterra, or partner sponsor feeds) for in-app browser and web view ad banners.</p>
+                <a href="https://www.start.io/policy/privacy-policy/" target="_blank" rel="noopener">Partner Ad Network Policies &rarr;</a>
+            </div>
+        </div>
+
+        <h3>Data Collected by Advertising Partners:</h3>
+        <p>Ad networks may automatically collect non-personally identifiable diagnostic and advertising data:</p>
+        <ul>
+            <li><strong>Google Advertising ID (AAID):</strong> A resettable pseudonymous mobile identifier used to measure ad impressions and prevent fraud.</li>
+            <li><strong>Device Telemetry:</strong> Device manufacturer, model, operating system version, carrier, network connection type (Wi-Fi/cellular), language, and screen resolution.</li>
+            <li><strong>IP Address:</strong> Used strictly for approximate geographic location (city/country level) to serve regionally appropriate ads and prevent click fraud.</li>
+            <li><strong>Ad Performance Metrics:</strong> Ad impressions, view completion, click interactions, and crash diagnostic logs.</li>
+        </ul>
+
+        <div class="callout-box">
+            <strong>Your Advertising Rights & Opt-Out Controls:</strong>
+            You can reset or completely delete your Advertising ID at any time via Android System Settings:
+            <br>
+            <em>Android Settings &gt; Google &gt; Ads &gt; Delete advertising ID</em> (or <em>Reset advertising ID</em>).
+            <br>
+            You may also opt out of interest-based advertising via the Digital Advertising Alliance (<a href="https://optout.aboutads.info/" target="_blank" rel="noopener">aboutads.info</a>) or the Network Advertising Initiative (<a href="https://optout.networkadvertising.org/" target="_blank" rel="noopener">networkadvertising.org</a>).
+        </div>
+    </section>
+
+    <section id="data-security">
+        <h2>7. Data Security, Encryption & Sandboxing</h2>
+        <p>We take rigorous precautions to protect your data:</p>
+        <ul>
+            <li><strong>Encrypted Local Storage:</strong> User measurements stored in the Room database are protected by Android app sandbox isolation and internal AES encryption keys.</li>
+            <li><strong>Secure Networking:</strong> External network requests (such as retrieving brand sizing guides or loading product thumbnails) are strictly routed over encrypted HTTPS (TLS 1.3).</li>
+            <li><strong>In-Memory Scan Purge:</strong> When you complete or exit a camera scan session, temporary frame buffers are immediately released and reclaimed by the garbage collector.</li>
+        </ul>
+    </section>
+
+    <section id="user-rights">
+        <h2>8. User Rights, Data Control & Deletion (GDPR & CCPA)</h2>
+        <p>Under regulations such as the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA/CPRA), users possess explicit rights concerning their data:</p>
+        <ul>
+            <li><strong>Right to Access:</strong> You can view all saved profile measurements, brand preferences, and closet records inside the Profile and Closet tabs at any time.</li>
+            <li><strong>Right to Rectification:</strong> You can edit any body dimension or fit preference with real-time updates.</li>
+            <li><strong>Right to Erasure ("Right to Be Forgotten"):</strong> You can wipe all profile records, measurement histories, and cached preferences instantly by selecting <em>"Reset / Clear All Data"</em> in the Profile menu.</li>
+            <li><strong>Uninstallation:</strong> Uninstalling VizFit automatically and permanently removes all local SQLite/Room database files from your device.</li>
+        </ul>
+    </section>
+
+    <section id="children">
+        <h2>9. Children's Privacy (COPPA Compliance)</h2>
+        <p>VizFit is designed for general audiences aged 13 and older (or 16 and older in the European Economic Area). We do not knowingly collect, request, or solicit personal data from children under the age of 13. If you believe that a child has provided us with personal information without parental verification, please contact us at <a href="mailto:moinu4068@gmail.com">moinu4068@gmail.com</a>, and we will promptly delete all relevant records.</p>
+    </section>
+
+    <section id="affiliate">
+        <h2>10. Third-Party E-Commerce & Retailer Outbound Links</h2>
+        <p>VizFit may provide deep links or referral redirects to third-party brand websites (such as Zara, Nike, Levi's, H&amp;M, Mango, Uniqlo, Khaadi, etc.) so that you can purchase clothing items in your recommended size. When you click on an external link, you will leave VizFit. We are not responsible for the privacy practices, content, transactions, or terms of third-party retail websites.</p>
+    </section>
+
+    <section id="changes">
+        <h2>11. Updates to This Privacy Policy</h2>
+        <p>We may periodically update this Privacy Policy to reflect enhancements to VizFit features, new ad network integrations, or modifications to statutory legal standards. Updates will be published on this page with a revised "Last Updated & Effective Date". We encourage you to review this policy periodically.</p>
+    </section>
+
+    <section id="contact">
+        <h2>12. Contact Information & Data Requests</h2>
+        <p>If you have any questions, suggestions, feedback, or data privacy requests regarding <strong>VizFit</strong>, please contact the developer directly:</p>
+        <div class="callout-box">
+            <strong>Developer:</strong> Raza<br>
+            <strong>Application:</strong> VizFit (Package: <code>com.raza.vizfit</code>)<br>
+            <strong>Inquiries & Support Email:</strong> <a href="mailto:moinu4068@gmail.com">moinu4068@gmail.com</a><br>
+            <strong>Location:</strong> Karachi, Pakistan
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Raza. All Rights Reserved. VizFit is an independent sizing and AR fitting utility.</p>
+        <p>Package ID: <code>com.raza.vizfit</code> | Single File HTML Privacy Policy</p>
+    </footer>
+</div>
+
+</body>
+</html>
